@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Network Graph Libraries</title>
+
+    <!-- vis.js Network Library - CDN -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link href="https://unpkg.com/vis-network/styles/vis-network.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Alternative: Local vis.js if you want to host it yourself -->
+    <!-- Download from: https://github.com/visjs/vis-network -->
+    <!-- <script type="text/javascript" src="lib/vis-network.min.js"></script> -->
+    <!-- <link href="lib/vis-network.min.css" rel="stylesheet" type="text/css" /> -->
+</head>
+<body>
+    <div id="app">Loading...</div>
+
+    <script>
+        console.log('vis.js Network Library loaded:', typeof vis !== 'undefined' ? 'Success' : 'Failed');
+        if (typeof vis !== 'undefined') {
+            console.log('vis.Network available:', typeof vis.Network !== 'undefined' ? 'Yes' : 'No');
+        }
+    </script>
+</body>
+</html>

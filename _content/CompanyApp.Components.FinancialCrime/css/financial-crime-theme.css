@@ -1,0 +1,291 @@
+/* Financial Crime Investigation System - Theme Styles */
+/* Mobile-first responsive design with Zambian context */
+
+:root {
+    /* Color Palette - Gradient Start/End Colors */
+    --fc-gold-start: #f59e0b;
+    --fc-gold-end: #d97706;
+    --fc-green-start: #10b981;
+    --fc-green-end: #059669;
+    --fc-blue-start: #3b82f6;
+    --fc-blue-end: #2563eb;
+    --fc-purple-start: #8b5cf6;
+    --fc-purple-end: #7c3aed;
+    --fc-red-start: #ef4444;
+    --fc-red-end: #dc2626;
+    --fc-orange-start: #f97316;
+    --fc-orange-end: #ea580c;
+}
+
+/* Gradient Card Backgrounds */
+.fc-card-gold {
+    background: linear-gradient(135deg, var(--fc-gold-start) 0%, var(--fc-gold-end) 100%);
+    color: white;
+}
+
+.fc-card-green {
+    background: linear-gradient(135deg, var(--fc-green-start) 0%, var(--fc-green-end) 100%);
+    color: white;
+}
+
+.fc-card-blue {
+    background: linear-gradient(135deg, var(--fc-blue-start) 0%, var(--fc-blue-end) 100%);
+    color: white;
+}
+
+.fc-card-purple {
+    background: linear-gradient(135deg, var(--fc-purple-start) 0%, var(--fc-purple-end) 100%);
+    color: white;
+}
+
+.fc-card-red {
+    background: linear-gradient(135deg, var(--fc-red-start) 0%, var(--fc-red-end) 100%);
+    color: white;
+}
+
+.fc-card-orange {
+    background: linear-gradient(135deg, var(--fc-orange-start) 0%, var(--fc-orange-end) 100%);
+    color: white;
+}
+
+/* Text Styles for Gradient Cards */
+.fc-card-text-overline {
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+}
+
+.fc-card-text-value {
+    color: white;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 767px) {
+    /* Mobile: Stack everything */
+    .fc-header-actions {
+        width: 100%;
+        max-width: none;
+        margin-top: 1rem;
+    }
+    
+    .fc-summary-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Make tables horizontally scrollable on mobile */
+    .rz-datatable-scrollable {
+        overflow-x: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet: 2 columns for summary cards */
+    .fc-summary-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Desktop: 4 columns for summary cards */
+    .fc-summary-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Icon Utilities */
+.fc-icon-xl {
+    font-size: 2.5rem;
+}
+
+.fc-icon-lg {
+    font-size: 2rem;
+}
+
+.fc-icon-md {
+    font-size: 1.5rem;
+}
+
+.fc-icon-sm {
+    font-size: 1rem;
+}
+
+/* Shadow Utilities (matching Radzen) */
+.fc-shadow-1 {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.fc-shadow-2 {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.fc-shadow-3 {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Data Grid Enhancements */
+.fc-grid-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.fc-grid-progress {
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* Mobile-friendly buttons */
+@media (max-width: 767px) {
+    .fc-action-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .fc-action-buttons .rz-button {
+        width: 100%;
+    }
+}
+
+/* Location Badge Styles */
+.fc-location-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--rz-text-secondary-color);
+}
+
+/* Status Indicators */
+.fc-status-active {
+    color: var(--fc-green-end);
+    font-weight: 600;
+}
+
+.fc-status-pending {
+    color: var(--fc-orange-end);
+    font-weight: 600;
+}
+
+.fc-status-completed {
+    color: var(--fc-blue-end);
+    font-weight: 600;
+}
+
+.fc-status-critical {
+    color: var(--fc-red-end);
+    font-weight: 600;
+}
+
+/* Responsive Typography */
+@media (max-width: 767px) {
+    .fc-header-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .fc-header-subtitle {
+        font-size: 0.875rem !important;
+    }
+    
+    .fc-card-value {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* Card Spacing */
+.fc-card-stack {
+    gap: 0.5rem;
+}
+
+.fc-card-stack-lg {
+    gap: 1rem;
+}
+
+/* Utility Classes */
+.fc-text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fc-text-secondary {
+    color: var(--rz-text-secondary-color);
+}
+
+.fc-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc-flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Tab Panel Styling */
+.fc-tabs {
+    margin-top: 1rem;
+}
+
+.fc-tab-panel {
+    padding: 1.5rem 0;
+}
+
+/* Form Styling */
+.fc-form-field {
+    margin-bottom: 1rem;
+}
+
+.fc-form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--rz-text-color);
+}
+
+.fc-form-required::after {
+    content: " *";
+    color: var(--fc-red-end);
+}
+
+/* Loading States */
+.fc-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.fc-empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--rz-text-secondary-color);
+}
+
+/* Print Styles */
+@media print {
+    .fc-no-print {
+        display: none !important;
+    }
+    
+    .fc-card-gold,
+    .fc-card-green,
+    .fc-card-blue,
+    .fc-card-purple,
+    .fc-card-red,
+    .fc-card-orange {
+        background: white !important;
+        color: black !important;
+        border: 1px solid #ddd;
+    }
+}
