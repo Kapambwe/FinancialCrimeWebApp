@@ -1,0 +1,71 @@
+/* Mobile responsive styles for Financial Crime Component */
+
+/* Hide desktop-only columns on mobile */
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none !important;
+    }
+    
+    /* Show inline badges on mobile */
+    .mobile-inline-badge {
+        display: inline-block;
+    }
+    
+    /* Adjust grid font size for mobile */
+    .rz-datatable-scrollable {
+        font-size: 0.85rem;
+    }
+    
+    /* Reduce padding in grid cells */
+    .rz-datatable-data td {
+        padding: 0.5rem 0.25rem;
+    }
+}
+
+/* Hide mobile-only elements on desktop */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none !important;
+    }
+    
+    .mobile-inline-badge {
+        display: none;
+    }
+}
+
+/* Touch-friendly spacing */
+.touch-target {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive text */
+.responsive-text-small {
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.responsive-text-body {
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.responsive-text-heading {
+    font-size: clamp(18px, 4vw, 24px);
+}
+
+/* Full width on mobile */
+@media (max-width: 767px) {
+    .mobile-full-width {
+        width: 100% !important;
+    }
+    
+    .mobile-stack {
+        flex-direction: column !important;
+    }
+    
+    .mobile-stack > * {
+        width: 100% !important;
+    }
+}
