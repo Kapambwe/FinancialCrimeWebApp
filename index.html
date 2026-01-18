@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Crime App</title>
+    <base href="/" id="dynamic-base">
+    <script>
+        // Dynamically set base path for GitHub Pages deployment
+        (function () {
+            var base = document.getElementById('dynamic-base');
+            var path = window.location.pathname.includes('/FinancialCrimeWebApp')
+                ? '/FinancialCrimeWebApp/'
+                : '/';
+            base.setAttribute('href', path);
+        })();
+    </script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="css/financial-crime.css" rel="stylesheet" />
+    <link href="_content/CompanyApp.Components.FinancialCrime/financial-crime.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="CompanyApp.Client.FinancialCrimeApp.styles.css" rel="stylesheet" />
+    <link href="_content/Radzen.Blazor/css/material-base.css" rel="stylesheet">
+    <!-- Leaflet CSS for maps -->
+    <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
+    <link href="css/vis-timeline-graph2d.min.css" rel="stylesheet" />
+
+    <!-- Leaflet Plugins CSS -->
+    <link href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" rel="stylesheet" />
+    <link href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" rel="stylesheet" />
+
+    <!-- Network Visualization Styles -->
+    <link href="_content/CompanyApp.Components.Network/css/visualization-styles.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <!-- External Libraries - Load BEFORE custom scripts -->
+    <!-- D3.js v7 for network and timeline visualizations -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Leaflet.js 1.9.4 for maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Leaflet Plugins -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <script src="https://unpkg.com/leaflet-polylinedecorator@1.6.0/dist/leaflet.polylineDecorator.js"></script>
+    <script src="https://unpkg.com/polyline-decorator@1.6.0/dist/leaflet.polylineDecorator.js"></script>
+
+    <!-- Vis.js for network graphs -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+    <!-- Custom Visualization Toolkits from Network Component -->
+    <script type="module" src="_content/CompanyApp.Components.Network/js/toolkits/networkGraph.js"></script>
+    <script type="module" src="_content/CompanyApp.Components.Network/js/toolkits/timelineViz.js"></script>
+    <script type="module" src="_content/CompanyApp.Components.Network/js/toolkits/geoMapViz.js"></script>
+    <script type="module" src="_content/CompanyApp.Components.Network/js/toolkits/leafletWrapper.js"></script>
+    <script type="module" src="_content/CompanyApp.Components.Network/js/toolkits/leafletCrimesWrapper.js"></script>
+    <script type="module" src="_content/CompanyApp.Components.Network/js/toolkits/interop.js"></script>
+    <script type="module" src="_content/CompanyApp.Components.Network/js/toolkits/NetworkGraph.js"></script>
+
+    <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    <script src="_content/CompanyApp.Components.FinancialCrime/js/networkGraphInterop.js"></script>
+    <script src="_content/CompanyApp.Components.FinancialCrime/site.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>

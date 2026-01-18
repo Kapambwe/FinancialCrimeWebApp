@@ -1,0 +1,210 @@
+/* _content/CompanyApp.Components.FinancialCrime/Component1.razor.rz.scp.css */
+.my-component[b-vvy9w29e1u] {
+    border: 2px dashed red;
+    padding: 1em;
+    margin: 1em 0;
+    background-image: url('background.png');
+}
+/* _content/CompanyApp.Components.FinancialCrime/Pages/AppealsAssetRecovery.razor.rz.scp.css */
+/* AppealsAssetRecovery Component Scoped Styles */
+
+/* Mobile responsive - hide desktop-only columns on mobile */
+@media (max-width: 767px) {
+    [b-74b1mu16b8] .desktop-only {
+        display: none !important;
+    }
+    
+    /* Make buttons touch-friendly on mobile */
+    [b-74b1mu16b8] .rz-button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Stack action buttons vertically on mobile */
+    [b-74b1mu16b8] .rz-stack[data-orientation="Horizontal"] {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Improve badge readability */
+[b-74b1mu16b8] .rz-badge {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+}
+/* _content/CompanyApp.Components.FinancialCrime/Pages/ArrestProcessing.razor.rz.scp.css */
+/* ArrestProcessing Component Scoped Styles */
+
+/* Mobile responsive - hide desktop-only columns on mobile */
+@media (max-width: 767px) {
+    [b-1lhyo8n0at] .desktop-only {
+        display: none !important;
+    }
+    
+    /* Make buttons touch-friendly on mobile */
+    [b-1lhyo8n0at] .rz-button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Stack action buttons vertically on mobile */
+    [b-1lhyo8n0at] .rz-stack[data-orientation="Horizontal"] {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Improve badge readability */
+[b-1lhyo8n0at] .rz-badge {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+}
+/* _content/CompanyApp.Components.FinancialCrime/Pages/CaseProfiling.razor.rz.scp.css */
+/* Mobile responsive styles for Case Profiling */
+
+@media (max-width: 767px) {
+    .desktop-only[b-17ryg24xd1] {
+        display: none !important;
+    }
+    
+    .mobile-inline-badge[b-17ryg24xd1] {
+        display: inline-block;
+    }
+    
+    .rz-datatable-scrollable[b-17ryg24xd1] {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-inline-badge[b-17ryg24xd1] {
+        display: none;
+    }
+}
+/* _content/CompanyApp.Components.FinancialCrime/Pages/DocketManagement.razor.rz.scp.css */
+/* DocketManagement Component Scoped Styles */
+
+/* Mobile responsive - hide desktop-only columns on mobile */
+@media (max-width: 767px) {
+    [b-kd9j6xwgwj] .desktop-only {
+        display: none !important;
+    }
+    
+    /* Make buttons touch-friendly on mobile */
+    [b-kd9j6xwgwj] .rz-button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Stack action buttons vertically on mobile */
+    [b-kd9j6xwgwj] .rz-stack[data-orientation="Horizontal"] {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Improve badge readability */
+[b-kd9j6xwgwj] .rz-badge {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+}
+/* _content/CompanyApp.Components.FinancialCrime/Pages/FormalInvestigations.razor.rz.scp.css */
+/* FormalInvestigations Component Scoped Styles */
+
+/* Mobile responsive - hide desktop-only columns on mobile */
+@media (max-width: 767px) {
+    [b-7jipzdwhko] .desktop-only {
+        display: none !important;
+    }
+    
+    /* Make buttons touch-friendly on mobile */
+    [b-7jipzdwhko] .rz-button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Stack action buttons vertically on mobile */
+    [b-7jipzdwhko] .rz-stack[data-orientation="Horizontal"] {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Improve badge readability */
+[b-7jipzdwhko] .rz-badge {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+}
+/* _content/CompanyApp.Components.FinancialCrime/Pages/Graphs/NetworkExplorer.razor.rz.scp.css */
+/* Network Explorer - Minimal CSS for vis.js graph container */
+/* All UI component styling is handled by Radzen Blazor components */
+
+/* vis.js network graph container */
+#network-graph[b-gy7igc5p1g] {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    background: #fafafa;
+    border-radius: var(--rz-border-radius);
+}
+
+/* Graph loading overlay */
+.graph-loading[b-gy7igc5p1g] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background: #fafafa;
+    border-radius: var(--rz-border-radius);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #network-graph[b-gy7igc5p1g] {
+        min-height: 400px;
+    }
+}
+/* _content/CompanyApp.Components.FinancialCrime/Pages/Graphs/NodeDetails.razor.rz.scp.css */
+/* Node Details - CSS file kept for potential future customizations */
+/* All UI component styling is currently handled by Radzen Blazor components */
+
+/* Add custom styling overrides here if needed */
+/* _content/CompanyApp.Components.FinancialCrime/Pages/IntelligenceDashboard.razor.rz.scp.css */
+/* Mobile responsive styles for Intelligence Dashboard */
+
+@media (max-width: 767px) {
+    .desktop-only[b-oove34zqve] {
+        display: none !important;
+    }
+    
+    .rz-datatable-scrollable[b-oove34zqve] {
+        font-size: 0.85rem;
+    }
+}
+/* _content/CompanyApp.Components.FinancialCrime/Pages/ProsecutorReview.razor.rz.scp.css */
+/* ProsecutorReview Component Scoped Styles */
+
+/* Mobile responsive - hide desktop-only columns on mobile */
+@media (max-width: 767px) {
+    [b-5dcjgt0m34] .desktop-only {
+        display: none !important;
+    }
+    
+    /* Make buttons touch-friendly on mobile */
+    [b-5dcjgt0m34] .rz-button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Stack action buttons vertically on mobile */
+    [b-5dcjgt0m34] .rz-stack[data-orientation="Horizontal"] {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Improve badge readability */
+[b-5dcjgt0m34] .rz-badge {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+}

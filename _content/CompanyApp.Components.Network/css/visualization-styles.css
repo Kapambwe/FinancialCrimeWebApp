@@ -1,0 +1,339 @@
+/* Network Graph Styles */
+.network-graph {
+    border: 1px solid #dee2e6;
+    background: #ffffff;
+}
+
+.network-graph .node {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.network-graph .node:hover {
+    stroke-width: 4px !important;
+}
+
+.network-graph .link {
+    stroke-opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.network-graph .link:hover {
+    stroke-opacity: 1;
+    stroke-width: 4px !important;
+}
+
+.network-graph .node-label {
+    fill: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+}
+
+/* Timeline Visualization Styles */
+.timeline-viz {
+    border: 1px solid #dee2e6;
+    background: #ffffff;
+}
+
+.timeline-viz .lane {
+    transition: fill 0.2s ease;
+}
+
+.timeline-viz .lane:hover {
+    fill: #e9ecef !important;
+}
+
+.timeline-viz .event-point {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.timeline-viz .event-point:hover {
+    r: 12 !important;
+}
+
+.timeline-viz .event-connection {
+    pointer-events: none;
+}
+
+/* Geo Map Styles */
+.custom-marker {
+    position: relative;
+}
+
+.marker-pin {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 0;
+    background: #3498db;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 50%;
+    top: 50%;
+    margin: -15px 0 0 -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.marker-pin:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 5px 0 0 5px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.marker-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-size: 16px;
+}
+
+.marker-pulse {
+    background: transparent;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -25px 0 0 -25px;
+    border: 3px solid #3498db;
+    animation: pulsate 1.5s ease-out infinite;
+    opacity: 0;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Marker Clusters */
+.marker-cluster-small {
+    background-color: rgba(52, 152, 219, 0.6);
+}
+
+.marker-cluster-medium {
+    background-color: rgba(243, 156, 18, 0.6);
+}
+
+.marker-cluster-large {
+    background-color: rgba(231, 76, 60, 0.6);
+}
+
+.marker-cluster {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.marker-cluster div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+/* Incident Markers */
+.incident-marker {
+    font-size: 0;
+}
+
+.incident-pin {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.incident-pin.critical {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.incident-pin.high {
+    background-color: #e67e22;
+    color: white;
+}
+
+.incident-pin.medium {
+    background-color: #f39c12;
+    color: white;
+}
+
+.incident-pin.low {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Popups */
+.location-popup {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-width: 200px;
+}
+
+.location-popup h6 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 5px;
+}
+
+.location-popup p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.location-popup .risk-badge {
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.incident-popup {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-width: 250px;
+}
+
+.incident-popup h6 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.incident-popup p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Moving Marker */
+.moving-marker {
+    font-size: 0;
+}
+
+.moving-pin {
+    font-size: 20px;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Leaflet Overrides */
+.leaflet-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+}
+
+.leaflet-popup-tip {
+    box-shadow: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .marker-pin {
+        width: 24px;
+        height: 24px;
+        margin: -12px 0 0 -12px;
+    }
+    
+    .marker-pin:after {
+        width: 16px;
+        height: 16px;
+        margin: 4px 0 0 4px;
+    }
+    
+    .marker-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+    
+    .marker-pulse {
+        height: 40px;
+        width: 40px;
+        margin: -20px 0 0 -20px;
+    }
+}
+
+/* Control Panels */
+.viz-controls {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.viz-controls .btn-group {
+    margin-right: 10px;
+}
+
+.viz-legend {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.viz-legend h6 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 8px;
+}
+
+.viz-legend-item {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.viz-legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.viz-legend-label {
+    font-size: 12px;
+    color: #333;
+}
